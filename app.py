@@ -89,6 +89,8 @@ with col2:
             else:
                 lista_vidas.append(max(0.5, vida_base - (t - 4) * 0.25))
 
+  st.write(df_vida.columns)     
+
         df_vida = pd.DataFrame({"Temperatura (°C)": lista_temps, "Días de vida útil": lista_vidas})
         fig1 = px.line(df_vida, x="Temperatura (°C)", y="Días de vida útil", title=f"Vida Útil vs Temp ({categoria})")
 
